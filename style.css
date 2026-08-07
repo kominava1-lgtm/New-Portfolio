@@ -9,6 +9,11 @@ body{
 
 }
 
+html, body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
 /*HEADER*/
 
 .welcome {
@@ -152,6 +157,121 @@ nav{
     margin: 20px;
 }
 
+
+
+
+
+
+/*PROJECT SECTION*/
+
+
+.project-card {
+    border: 1px solid rgba(255,255,255,0.5);
+    box-shadow: 0 6px 6px rgba(0,0,0,0.5);
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 20px;
+    margin: 20px;
+    text-align: left;
+}
+
+.project-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+    
+
+    
+}
+
+.project-img {
+    width: 20rem;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.project-link {
+    text-decoration: none;
+    color: white;
+    border-bottom: white solid 2px;
+    cursor: pointer;
+}
+
+a:hover {
+        color: red;
+        transition:  ease 0.3s;
+        border-bottom: red solid 2px;
+
+    }
+
+/* Base Slider Mechanics */
+.slider-wrapper { 
+  width: 100%; 
+  margin: 0 auto;  
+  text-align: center; 
+}
+
+/* Hide Radio Inputs Completely */
+input[type="radio"] { 
+  display: none; 
+}
+
+/* Visual Clipping Window */
+.slider-window { 
+  width: 100%; 
+  overflow: hidden;  
+  box-shadow: 0 10px 25px rgba(209, 11, 11, 0.705); 
+  margin: 0 auto;
+
+}
+
+/* The Sliding Track Element */
+.slider-track { 
+  display: flex; 
+  width: 400%; /* 100% multiplied by your total number of cards */ 
+  transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1); 
+}
+
+
+
+/* Horizontal Radio Position Shifts */
+#slide-1:checked ~ .slider-window .slider-track { transform: translateX(0%); }
+#slide-2:checked ~ .slider-window .slider-track { transform: translateX(-25%); }
+#slide-3:checked ~ .slider-window .slider-track { transform: translateX(-50%); }
+#slide-4:checked ~ .slider-window .slider-track { transform: translateX(-75%); }
+
+/* Dot Controls Layout */
+.slider-dots { 
+  display: flex; 
+  justify-content: center; 
+  gap: 10px; 
+  margin-top: 20px; 
+}
+
+.slider-dots label { 
+  width: 12px; 
+  height: 12px; 
+  background: #d1d5db; 
+  border-radius: 50%; 
+  cursor: pointer; 
+  transition: background 0.3s, transform 0.3s; 
+}
+
+.slider-dots label:hover { 
+  background: #9ca3af; 
+}
+
+/* Highlight Selected Active Dot */
+#slide-1:checked ~ .slider-dots label[for="slide-1"],
+#slide-2:checked ~ .slider-dots label[for="slide-2"],
+#slide-3:checked ~ .slider-dots label[for="slide-3"],
+#slide-4:checked ~ .slider-dots label[for="slide-4"] { 
+  background: #4f46e5; 
+  transform: scale(1.2); 
+}
 
 
 
