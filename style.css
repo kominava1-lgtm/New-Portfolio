@@ -71,14 +71,14 @@ nav {
 }
 
 .navbar a {
-    color: #eff0f1;
+    color: #b00303;
     text-decoration: none;
     transition: 0.3s ease;
     font-weight: bold;
 }
 
 .navbar a:hover {
-    color: red;
+    color: white;
     border: none;
 }
 
@@ -616,6 +616,9 @@ a:hover {
 /* =========================
    FOOTER
 ========================= */
+hr {
+    margin: 10px 0;
+}
 
 footer {
     background-color: rgb(137, 3, 3);
@@ -624,7 +627,7 @@ footer {
     padding: 20px;
     font-family: Arial, sans-serif;
     font-size: 12px;
-    margin: 0 -10px;
+    margin: -10px -10px;
 }
 
 footer a {
