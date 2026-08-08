@@ -4,116 +4,173 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ESN Portfolio</title>
-    <link rel = "stylesheet" href = "style.css">
-
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <header class = "header">
-        <h1 class = "logo">ESN Portfolio</h1>
+    <header class="header">
+        <h1 class="logo">ESN Portfolio</h1>
     </header>
-        <nav>
-            <ul class = "navbar">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about-section">About</a></li>
-                <li><a href="#project-section">Projects</a></li>
-            </ul>
-        </nav>
-    
-    <hr>
-<!--MAIN CONTENT OF PORTFOLIO -->
-    <main>
-<!--HOME SECTION -->        
-        <section class = "home" id = "home">
-            <h2 class ="welcome">Welcome to My Portfolio</h2>
 
-            <div class = "home-content">
-                <p class = "welcome-message"><span class = "subtitle">What is this? Where am I?</span><br><br>This is the portfolio of Santiago C. Navato II. A  fresh graduate of 
+    <nav>
+        <ul class="navbar">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about-section">About</a></li>
+            <li><a href="#project-section">Projects</a></li>
+        </ul>
+    </nav>
+
+    <hr>
+
+    <!--MAIN CONTENT OF PORTFOLIO -->
+    <main>
+
+        <!--HOME SECTION -->
+        <section class="home" id="home">
+            <h2 class="welcome">Welcome to My Portfolio</h2>
+
+            <div class="home-content">
+                <p class="welcome-message">
+                    <span class="subtitle">What is this? Where am I?</span><br><br>
+                    This is the portfolio of Santiago C. Navato II. A  fresh graduate of 
                     BS Computer Engineering and a rising frontend developer. You may browse this portfolio for projects and
-                    information about his work.<br><br>This website is an ongoing project. Interface can be changed without prior notice. You may leave a comment on how can I improve it. Thanksu!</p>
-            
-                <div class = "home-content-right">
-                    <img class = "profile-picture" src = "IMG_9546.JPG" alt = "Engr. Santiago C. Navato II" width = "200" height = "200">
-                    <p class="right-about-me">Who I Am:<br><span class="normal">A leader, a solver, a learner. A person who wants to make a difference. You may scroll down to learn more about me. Lorem Ipsum dolor sit amet, consectetur adipiscing elit.</span></p>
+                    information about his work.<br><br>This website is an ongoing project. Interface can be changed without prior notice. You may leave a comment on how can I improve it. Thanksu!
+                </p>
+
+                <div class="home-content-right">
+                    <img class="profile-picture" src="IMG_9546.JPG" alt="Engr. Santiago C. Navato II" width="200" height="200">
+
+                    <p class="right-about-me">
+                        Who I Am:<br>
+                        <span class="normal">A leader, a solver, a learner. A person who wants to make a difference. You may scroll down to learn more about me. Lorem Ipsum dolor sit amet, consectetur adipiscing elit.</span>
+                    </p>
                 </div>
             </div>
         </section>
-            <hr>
 
-<!--ABOUT SECTION -->
-        <section class = "about-section" id = "about-section">
-            <h2 class = "section-title">About Me</h2>
-            <p>This section contains information about the user, including his background, skills, and experience.</p>
-        </section>
         <hr>
 
-<!--PROJECTS SECTION-->
-        <section class = "project-section" id = "project-section">
-            <h2 class = "section-title">Projects</h2>
+        <!--ABOUT SECTION -->
+        <section class="about-section" id="about-section">
+            <h2 class="section-title">About Me</h2>
+            <p>This section contains information about the user, including his background, skills, and experience.</p>
+        </section>
+
+        <hr>
+
+        <!--PROJECTS SECTION-->
+        <section class="project-section" id="project-section">
+            <h2 class="section-title">Projects</h2>
             <p>You may browse the projects of the user to view his work.</p>
 
-<!--SLIDER -->
-    <div class="slider-wrapper">
-  <!-- The Core State Controllers -->
-        <input type="radio" name="slider" id="slide-1" checked>
-        <input type="radio" name="slider" id="slide-2">
-        <input type="radio" name="slider" id="slide-3">
-        <input type="radio" name="slider" id="slide-4">
-
-        <!-- The View Window -->
-        <div class="slider-window">
-            <div class="slider-track">
-            
-        <div class = "project-container">
-
-            <div class = "project-card">
+            <!--<div class = "project-card">
                 <img src = "bg2.jpg" alt= "project 1" class = "project-img">
                 <h3>Project 1</h3>
                 <p>Description of Project 1</p>
 
                 <a href = "project1.html" class = "project-link"><i>Click to view Project</i></a>
+            </div>-->
+
+            <!--SLIDER -->
+            <div class="slider">
+
+                <!-- Slider controls -->
+                <input type="radio" name="slider" id="slide1" checked>
+                <input type="radio" name="slider" id="slide2">
+                <input type="radio" name="slider" id="slide3">
+                <input type="radio" name="slider" id="slide4">
+                <input type="radio" name="slider" id="slide5">
+                <input type="radio" name="slider" id="slide6">
+                <input type="radio" name="slider" id="slide7">
+                <input type="radio" name="slider" id="slide8">
+
+                <!-- Cards -->
+                <div class="cards">
+
+                    <div class="project-card">
+                        <img src="bg2.jpg" alt="project 1" class="project-img">
+                        <h3>Project 1</h3>
+                        <p>Description of Project 1</p>
+
+                        <a href="project1.html" class="project-link"><i>Click to view Project</i></a>
+                    </div>
+
+                    <div class="project-card">
+                        <img src="bg2.jpg" alt="project 1" class="project-img">
+                        <h3>Project 1</h3>
+                        <p>Description of Project 1</p>
+
+                        <a href="project1.html" class="project-link"><i>Click to view Project</i></a>
+                    </div>
+
+                    <div class="project-card">
+                        <img src="bg2.jpg" alt="project 1" class="project-img">
+                        <h3>Project 1</h3>
+                        <p>Description of Project 1</p>
+
+                        <a href="project1.html" class="project-link"><i>Click to view Project</i></a>
+                    </div>
+
+                    <div class="project-card">
+                        <img src="bg2.jpg" alt="project 1" class="project-img">
+                        <h3>Project 1</h3>
+                        <p>Description of Project 1</p>
+
+                        <a href="project1.html" class="project-link"><i>Click to view Project</i></a>
+                    </div>
+
+                    <div class="project-card">
+                        <img src="bg2.jpg" alt="project 1" class="project-img">
+                        <h3>Project 1</h3>
+                        <p>Description of Project 1</p>
+
+                        <a href="project1.html" class="project-link"><i>Click to view Project</i></a>
+                    </div>
+
+                    <div class="project-card">
+                        <img src="bg2.jpg" alt="project 1" class="project-img">
+                        <h3>Project 1</h3>
+                        <p>Description of Project 1</p>
+
+                        <a href="project1.html" class="project-link"><i>Click to view Project</i></a>
+                    </div>
+
+                    <div class="project-card">
+                        <img src="bg2.jpg" alt="project 1" class="project-img">
+                        <h3>Project 1</h3>
+                        <p>Description of Project 1</p>
+
+                        <a href="project1.html" class="project-link"><i>Click to view Project</i></a>
+                    </div>
+
+                    <div class="project-card">
+                        <img src="bg2.jpg" alt="project 1" class="project-img">
+                        <h3>Project 1</h3>
+                        <p>Description of Project 1</p>
+
+                        <a href="project1.html" class="project-link"><i>Click to view Project</i></a>
+                    </div>
+
+                </div>
+
+                <!-- Navigation dots -->
+                <div class="navigation">
+                    <label for="slide1"></label>
+                    <label for="slide2"></label>
+                    <label for="slide3"></label>
+                    <label for="slide4"></label>
+                    <label for="slide5"></label>
+                    <label for="slide6"></label>
+                    <label for="slide7"></label>
+                    <label for="slide8"></label>
+                </div>
+
             </div>
-
-            <div class = "project-card">
-                <img src = "bg2.jpg" alt= "project 2" class = "project-img">
-                <h3>Project 2</h3>
-                <p>Description of Project 2</p>
-
-                <a href = "project2.html" class = "project-link"><i>Click to view Project</i></a>
-            </div>
-
-            <div class = "project-card">
-                <img src = "bg2.jpg" alt= "project 3" class = "project-img">
-                <h3>Project 3</h3>
-                <p>Description of Project 3</p>
-
-                <a href = "project3.html" class = "project-link"><i>Click to view Project</i></a>
-            </div>
-
-            <div class = "project-card">
-                <img src = "bg2.jpg" alt= "project 4" class = "project-img">
-                <h3>Project 4</h3>
-                <p>Description of Project 4</p>
-
-                <a href = "project4.html" class = "project-link"><i>Click to view Project</i></a>
-            </div>
-            
-            </div>
-        </div>
-        </div> 
-
-        <div class="slider-dots">
-        <label for="slide-1"></label>
-        <label for="slide-2"></label>
-        <label for="slide-3"></label>
-        <label for="slide-4"></label>
-        </div>
-
-    </div>
+            <!-- End of Slider-->
 
         </section>
-        <hr>
 
+        <hr>
 
     </main>
 
@@ -123,8 +180,6 @@
         <p>Email: <a href="mailto:santiagonavato@gmail.com">santiagonavato@gmail.com</a></p>
         <p>Contact: +639123456789</p>
         <p>Address: Bugallon, Pangasinan</p>
-
-
     </footer>
 
 </body>
