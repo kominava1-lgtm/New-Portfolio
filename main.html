@@ -3,22 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ESN Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Santiago C. Navato II — Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style-new.css">
 </head>
 
 <body>
-    <header class="header">
-        <h1 class="logo">ESN Portfolio</h1>
-    </header>
 
-    <nav>
-        <ul class="navbar">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about-section">About</a></li>
-            <li><a href="#project-section">Projects</a></li>
-        </ul>
-    </nav>
+    <header class = "header">
+        <nav class = "navbar-wrap">
+            <a href = "#home" class="logo">&lt;ESN/&gt;</a>
+            <ul class="navbar">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about-section">About</a></li>
+                <li><a href="#project-section">Projects</a></li>
+                <li><a href="#project-section">Projects</a></li>
+            </ul>
+        </nav>
+    </header>
 
     <hr>
 
@@ -26,207 +30,354 @@
     <main>
 
         <!--HOME SECTION -->
-        <section class="home" id="home">
-            <h2 class="welcome">Welcome to My Portfolio</h2>
-
-            <div class="home-content">
-                <p class="welcome-message">
-                    <span class="subtitle">What is this? Where am I?</span><br><br>
-                    This is the portfolio of Santiago C. Navato II. A  fresh graduate of 
-                    BS Computer Engineering and a rising frontend developer. You may browse this portfolio for projects and
-                    information about his work.<br><br>This website is an ongoing project. Interface can be changed without prior notice. You may leave a comment on how can I improve it. Thanksu!
-                </p>
-
-                <div class="home-content-right">
-                    <img class="profile-picture" src="IMG_9546.JPG" alt="Engr. Santiago C. Navato II" width="200" height="200">
-
-                    <p class="right-about-me">
-                        Who I Am:<br>
-                        <span class="normal">A leader, a solver, a learner. A person who wants to make a difference. You may scroll down to learn more about me. Lorem Ipsum dolor sit amet, consectetur adipiscing elit.</span>
+        <section class="section home" id="home">
+            <p class = "section-text home-section-text">ESN1 &middot; Home</p>
+            <div class = "home-grid">
+                <div class = "home-text">
+                    
+                    <h1 class="home-name">Santiago C. Navato II</h1>
+                    <p class = "home-role">Computer Engineer &middot; Rising Frontend Developer</p>
+                    <p class="home-welcome-message">
+                        <span class="subtitle">What is this? Where am I?</span><br><br>
+                            This is the portfolio of Santiago C. Navato II. A  fresh graduate of 
+                            BS Computer Engineering and a rising frontend developer. You may browse this portfolio for projects and
+                            information about his work.<br><br>I like knowing how things work underneath, and I like making that work visible
+                        through interfaces people actually enjoy using. This site is a running log of
+                        what I've built and who I am outside the resume.<br><br>This website is an ongoing project. Interface can be changed without prior notice. You may leave a comment on how can I improve it. Thanksu!
                     </p>
+                    <div class = "home-actions">
+                        <a href = "#project-section" class = "btn btn-primary">View Projects</a>
+                        <a href = "#" class = "btn btn-primary">View Resume/CV</a>
+                        <a href = "#about-section" class = "btn btn-ghost">Get in Touch</a>
+                    </div>
+                </div>
+
+                <div class="home-photo-wrap">
+                    <div class="home-photo-frame">
+                        <span class="corner corner-tl"></span>
+                        <span class="corner corner-tr"></span>
+                        <span class="corner corner-bl"></span>
+                        <span class="corner corner-br"></span>
+                        <img class="home-photo" src="IMG_9546.JPG" alt="Engr. Santiago C. Navato II" width="320" height="320">
+                    </div>
+
+                    <div class="home-tags">
+                        <span class="mono-tag">AGE 22</span>
+                        <span class="mono-tag">PANGASINAN, PH</span>
+                        <span class="mono-tag mono-tag-accent">OPEN TO WORK</span>
+                    </div>
                 </div>
             </div>
         </section>
 
+                    
         <hr>
 
         <!--PROJECTS SECTION-->
-        <section class="project-section" id="project-section">
+        <section class="section" id="project-section">
+            <p class = "section-text">ESN2 &middot; Projects</p>
             <h2 class="section-title">Projects</h2>
-            <p>You may browse the projects of the user to view his work.</p>
-
-            <!--<div class = "project-card">
-                <img src = "bg2.jpg" alt= "project 1" class = "project-img">
-                <h3>Project 1</h3>
-                <p>Description of Project 1</p>
-
-                <a href = "project1.html" class = "project-link"><i>Click to view Project</i></a>
-            </div>-->
-
-            <!--SLIDER -->
-            <div class="slider">
-
-                <!-- Slider controls -->
-                <input type="radio" name="slider" id="slide1" checked>
-                <input type="radio" name="slider" id="slide2">
-                <input type="radio" name="slider" id="slide3">
-                <input type="radio" name="slider" id="slide4">
-                <input type="radio" name="slider" id="slide5">
-                <input type="radio" name="slider" id="slide6">
-                <input type="radio" name="slider" id="slide7">
-                <input type="radio" name="slider" id="slide8">
+            <p class = "section-intro">You may browse the projects of the user to view his work.</p>
 
                 <!-- Cards -->
-                <div class="cards">
+                <div class="project-grid">
 
                     <div class="project-card">
                         <img src="bg3.png" alt="project 1" class="project-img">
-                        <h3>Project 1</h3>
-                        <p>Description of Project 1</p>
-
+                        <div class = "project-body">    
+                            <h3>Project 1</h3>
+                            <p>Placeholder entry for a full-stack inventory tracker &mdash; swap in your capstone or class project details here.</p>
+                            <div class="tag-row">
+                                <span class="tag">JavaScript</span>
+                                <span class="tag">SQL</span>
+                            </div>
                         <a href="project1.html" class="project-link"><i>Click to view Project</i></a>
+                        </div>
                     </div>
 
                     <div class="project-card">
                         <img src="bg2.jpg" alt="project 1" class="project-img">
-                        <h3>Project 1</h3>
-                        <p>Description of Project 1</p>
-
+                        <div class = "project-body">    
+                            <h3>Project 1</h3>
+                            <p>Placeholder entry for a full-stack inventory tracker &mdash; swap in your capstone or class project details here.</p>
+                            <div class="tag-row">
+                                <span class="tag">JavaScript</span>
+                                <span class="tag">SQL</span>
+                            </div>
                         <a href="project1.html" class="project-link"><i>Click to view Project</i></a>
+                        </div>
                     </div>
 
                     <div class="project-card">
                         <img src="bg3.png" alt="project 1" class="project-img">
-                        <h3>Project 1</h3>
-                        <p>Description of Project 1</p>
-
+                        <div class = "project-body">    
+                            <h3>Project 1</h3>
+                            <p>Placeholder entry for a full-stack inventory tracker &mdash; swap in your capstone or class project details here.</p>
+                            <div class="tag-row">
+                                <span class="tag">JavaScript</span>
+                                <span class="tag">SQL</span>
+                            </div>
                         <a href="project1.html" class="project-link"><i>Click to view Project</i></a>
+                        </div>
                     </div>
 
                     <div class="project-card">
                         <img src="bg2.jpg" alt="project 1" class="project-img">
-                        <h3>Project 1</h3>
-                        <p>Description of Project 1</p>
-
+                        <div class = "project-body">    
+                            <h3>Project 1</h3>
+                            <p>Placeholder entry for a full-stack inventory tracker &mdash; swap in your capstone or class project details here.</p>
+                            <div class="tag-row">
+                                <span class="tag">JavaScript</span>
+                                <span class="tag">SQL</span>
+                            </div>
                         <a href="project1.html" class="project-link"><i>Click to view Project</i></a>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <img src="bg3.png" alt="project 1" class="project-img">
+                        <div class = "project-body">    
+                            <h3>Project 1</h3>
+                            <p>Placeholder entry for a full-stack inventory tracker &mdash; swap in your capstone or class project details here.</p>
+                            <div class="tag-row">
+                                <span class="tag">JavaScript</span>
+                                <span class="tag">SQL</span>
+                            </div>
+                        <a href="project1.html" class="project-link"><i>Click to view Project</i></a>
+                        </div>
                     </div>
 
                     <div class="project-card">
                         <img src="bg2.jpg" alt="project 1" class="project-img">
-                        <h3>Project 1</h3>
-                        <p>Description of Project 1</p>
-
+                        <div class = "project-body">    
+                            <h3>Project 1</h3>
+                            <p>Placeholder entry for a full-stack inventory tracker &mdash; swap in your capstone or class project details here.</p>
+                            <div class="tag-row">
+                                <span class="tag">JavaScript</span>
+                                <span class="tag">SQL</span>
+                            </div>
                         <a href="project1.html" class="project-link"><i>Click to view Project</i></a>
+                        </div>
                     </div>
 
                     <div class="project-card">
-                        <img src="bg2.jpg" alt="project 1" class="project-img">
-                        <h3>Project 1</h3>
-                        <p>Description of Project 1</p>
-
+                        <img src="bg3.png" alt="project 1" class="project-img">
+                        <div class = "project-body">    
+                            <h3>Project 1</h3>
+                            <p>Placeholder entry for a full-stack inventory tracker &mdash; swap in your capstone or class project details here.</p>
+                            <div class="tag-row">
+                                <span class="tag">JavaScript</span>
+                                <span class="tag">SQL</span>
+                            </div>
                         <a href="project1.html" class="project-link"><i>Click to view Project</i></a>
-                    </div>
-
-                    <div class="project-card">
-                        <img src="bg2.jpg" alt="project 1" class="project-img">
-                        <h3>Project 1</h3>
-                        <p>Description of Project 1</p>
-
-                        <a href="project1.html" class="project-link"><i>Click to view Project</i></a>
-                    </div>
-
-                    <div class="project-card">
-                        <img src="bg2.jpg" alt="project 1" class="project-img">
-                        <h3>Project 1</h3>
-                        <p>Description of Project 1</p>
-
-                        <a href="project1.html" class="project-link"><i>Click to view Project</i></a>
+                        </div>
                     </div>
 
                 </div>
-
-                <!-- Navigation dots -->
-                <div class="navigation">
-                    <label for="slide1"></label>
-                    <label for="slide2"></label>
-                    <label for="slide3"></label>
-                    <label for="slide4"></label>
-                    <label for="slide5"></label>
-                    <label for="slide6"></label>
-                    <label for="slide7"></label>
-                    <label for="slide8"></label>
-                </div>
-
-            </div>
-            <!-- End of Slider-->
-
         </section>
 
         <hr>
 
 
         <!--ABOUT SECTION -->
-        <section class="about-section" id="about-section">
+        <section class="section" id="about-section">
+            <p class="section-text">ESN3 &middot; About</p>
+            <h2 class="section-title">About Me</h2>
+            <p class="section-intro">Background, education, and the leadership experience that shaped how I work.</p>
+
+            <div class="spec-grid">
+                <div class="card spec-card">
+                    <h3 class="card-title">Personal Information</h3>
+                    <dl class="spec-list">
+                        <div><dt>Name</dt><dd>Santiago Cosas Navato II</dd></div>
+                        <div><dt>Age</dt><dd>22</dd></div>
+                        <div><dt>Sex</dt><dd>Male</dd></div>
+                        <div><dt>Birthdate</dt><dd>February 22, 2004</dd></div>
+                        <div><dt>Address</dt><dd>Pangasinan, Philippines</dd></div>
+                    </dl>
+                </div>
+
+                <div class="card spec-card">
+                    <h3 class="card-title">Education</h3>
+                    <h4 class="card-subhead">Tertiary</h4>
+                    <p class="card-text">PHINMA University of Pangasinan<br>BS Computer Engineering<br>Batch 2026</p>
+                    <h4 class="card-subhead">Secondary</h4>
+                    <p class="card-text">Pangasinan National High School<br>Senior High School &mdash; STEM<br>Batch 2022</p>
+                </div>
+
+                <div class="card spec-card">
+                    <h3 class="card-title">Leadership Experience</h3>
+                    <h4 class="card-subhead">Supreme Student Council</h4>
+                    <ul class="a-list">
+                        <li>CEA Representative (2025&ndash;2026)</li>
+                        <li>Editor (2022&ndash;2024)</li>
+                    </ul>
+                    <h4 class="card-subhead">ICpEP.SE &mdash; Region 1</h4>
+                    <ul class="a-list">
+                        <li>VP for External Affairs (2025&ndash;2026)</li>
+                    </ul>
+                    <h4 class="card-subhead">ICpEP.SE &mdash; PHINMA UPang</h4>
+                    <ul class="a-list">
+                        <li>VP for External Affairs (2024&ndash;2025)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="about-lower-grid">
+                <div class="card about-right">
+                    <h3 class="card-title">Beyond the Resume</h3>
+                    <p class="card-text">
+                        I got into Computer Engineering because I liked knowing how things work
+                        underneath &mdash; then found frontend development because I liked making
+                        that work visible. I care about interfaces that feel considered, not just functional.
+                    </p>
+                    <div class="quick-facts">
+                        <div class="fact"><span class="fact-label">Currently learning</span><span class="fact-value">React &amp; TypeScript</span></div>
+                        <div class="fact"><span class="fact-label">Also into</span><span class="fact-value">Embedded systems, UI design</span></div>
+                        <div class="fact"><span class="fact-label">Open to</span><span class="fact-value">Internships &amp; collaborations</span></div>
+                    </div>
+                </div>
+
+                <div class="card skills-card">
+                    <h3 class="card-title">Skills &amp; Tools</h3>
+                    <div class="skills-grid">
+                        <div class="skill-group">
+                            <h4>Languages</h4>
+                            <div class="chip-row">
+                                <span class="chip">HTML</span>
+                                <span class="chip">CSS</span>
+                                <span class="chip">JavaScript</span>
+                                <span class="chip">Python</span>
+                            </div>
+                        </div>
+                        <div class="skill-group">
+                            <h4>Tools</h4>
+                            <div class="chip-row">
+                                <span class="chip">React</span>
+                                <span class="chip">Git &amp; GitHub</span>
+                                <span class="chip">VS Code</span>
+                                <span class="chip">Figma</span>
+                                <span class="chip">Canva</span>
+                                <span class="chip">Capcut</span>
+                            </div>
+                        </div>
+                        <div class="skill-group">
+                            <h4>Other</h4>
+                            <div class="chip-row">
+                                <span class="chip">Responsive design</span>
+                                <span class="chip">UI/UX basics</span>
+                                <span class="chip">Arduino</span>
+                                <span class="chip">Video Editing</span>
+                                <span class="chip">Layout Editing</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+       
+        <!--<section class="about-section" id="about-section">
             <h2 class="section-title">About Me</h2>
             <p>This section contains information about the user, including his background, skills, and experience.</p>
             
-        <div class = "about-carousel">
-            <div class = "about-personal-info">
-                <div class = "about-personal card">
-                    <h3 class = "abt-title">Personal Information</h3>
-                    <p>Name: Santiago Cosas Navato II</p>
-                    <p>Age: 22</p>
-                    <p>Sex: Male</p>
-                    <p>Birthdate: February 22, 2004</p>
-                    <p>Address: Pangasinan, Philippines</p>
+            <div class = "about-body">
+
+                <div class = "about-carousel">
+                    <div class = "about-personal-info">
+                        <div class = "about-personal card">
+                            <h3 class = "abt-title">Personal Information</h3>
+                            <p>Name: Santiago Cosas Navato II</p>
+                            <p>Age: 22</p>
+                            <p>Sex: Male</p>
+                            <p>Birthdate: February 22, 2004</p>
+                            <p>Address: Pangasinan, Philippines</p>
+                        </div>
+
+                        <div class = "about-education card">
+                            <h3 class = "abt-title">Education</h3>
+                            <h4>Tertiary</h4>
+                            <p>PHINMA University of Pangasinan<br>Bachelor of Science in Computer Engineering<br>Batch 2026</p>
+                            <h4>Secondary</h4>
+                            <p>Pangasinan National High School<br>Senior High School-STEM<br>Batch 2022</p>
+                        </div>
+
+                        <div class = "about-leadership card">
+                            <h3 class = "abt-title">Leadership Experiences</h3>
+                            <h4>Supreme Student Council</h4>
+                            <ul class = "a-list">
+                                <li>CEA Representative (2025-2026)</li>
+                                <li>Editor (2022-2024)</li>
+                            </ul>
+                            <h4>Institute of Computer Engineers of the Philippines Student Edtion (Region 1)</h4>
+                            <ul class = "a-list">
+                                <li>Vice President for External Affairs (2025-2026)</li>
+                            </ul>
+                            
+                            <h4>Institute of Computer Engineers of the Philippines Student Edtion (PHINMA UPang)</h4>
+                            <ul class = "a-list">
+                                <li>Vice President fo External Affairs (2024-2025)</li>     
+                        </div>
+                    </div> 
                 </div>
 
-                <div class = "about-education card">
-                    <h3 class = "abt-title">Education</h3>
-                    <h4>Tertiary</h4>
-                    <p>PHINMA University of Pangasinan<br>Bachelor of Science in Computer Engineering<br>Batch 2026</p>
-                    <h4>Secondary</h4>
-                    <p>Pangasinan National High School<br>Senior High School-STEM<br>Batch 2022</p>
-                </div>
-
-                <div class = "about-leadership card">
-                    <h3 class = "abt-title">Leadership Experiences</h3>
-                    <h4>Supreme Student Council</h4>
-                    <ul class = "a-list">
-                        <li>CEA Representative (2025-2026)</li>
-                        <li>Editor (2022-2024)</li>
-                    </ul>
-                    <h4>Institute of Computer Engineers of the Philippines Student Edtion (Region 1)</h4>
-                    <ul class = "a-list">
-                        <li>Vice President for External Affairs (2025-2026)</li>
-                    </ul>
-                    
-                    <h4>Institute of Computer Engineers of the Philippines Student Edtion (PHINMA UPang)</h4>
-                    <ul class = "a-list">
-                        <li>Vice President fo External Affairs (2024-2025)</li>
-                        
-                </div>
-
+                <div class = "about-right"> sfs</div>
 
             </div>
 
-            
-        </div>
-
-        <div class = "about-skills"></div>
-        </section>
-
+                <div class = "about-skills"></div>
+        </section>-->
         <hr>
+
+        <!--CONTACT SECTION-->
+
+        <section class = "section" id = "contact-section">
+            <p class = "section-text">ESN4 &middot; Contact</p>
+            <h2 class = "section-title">Let's connect!</h2>
+            <p class = "section-intro">Open to collaborations, or just a conversation about frontend and embedded systems.</p>
+
+            <div class = "contact-grid">
+                <a href = "mailto:santiagonavato@gmail.com" class = "card contact-card">
+                    <span class = "contact-icon" aria-hidden = "true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+                    </span>
+                    <span class = "contact-label">Email</span>
+                    <span class = "contact-value">kominava1@gmail.com</span>
+                </a>
+
+                <a href="tel:+639123456789" class="card contact-card">
+                    <span class="contact-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L14 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 1-2z"/></svg>
+                    </span>
+                    <span class="contact-label">Phone</span>
+                    <span class="contact-value">+63 912 345 6789</span>
+                </a>
+
+                <div class="card contact-card contact-card-static c-add">
+                    <span class="contact-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s7-6.5 7-12a7 7 0 0 0-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>
+                    </span>
+                    <span class="contact-label">Address</span>
+                    <span class="contact-value">Poblacion, Bugallon, Pangasinan, Philippines, 2416</span>
+                </div>
+            </div>
+
+            <div class = "social-row">
+                <a href="#" class="social-link"><svg class = "social-icon" viewBox="0 0 24 24" fill="currentColor">
+    <path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.5 0-.24-.01-1.04-.01-1.88-2.78.62-3.37-1.19-3.37-1.19-.46-1.19-1.11-1.51-1.11-1.51-.91-.63.07-.62.07-.62 1 .07 1.53 1.05 1.53 1.05.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.06 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.28 2.75 1.05a9.3 9.3 0 0 1 5 0c1.91-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.93-2.34 4.79-4.57 5.05.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .27.18.6.69.5A10.26 10.26 0 0 0 22 12.25C22 6.58 17.52 2 12 2z"/>
+</svg>GitHub</a>
+                <a href="#" class="social-link"><svg class = "social-icon" viewBox="0 0 24 24" fill="currentColor">
+    <path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.86 0-2.14 1.45-2.14 2.94v5.66H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/>
+</svg>LinkedIn</a>
+            </div>
+        </section>
 
         
     </main>
 
     <!--FOOTER-->
     <footer>
+        <p class = "logo">&lt;ESN/&gt;</p>
         <p>&copy; 2023 Santiago C. Navato II. All rights reserved.</p>
-        <p>Email: <a href="mailto:santiagonavato@gmail.com">santiagonavato@gmail.com</a></p>
-        <p>Contact: +639123456789</p>
-        <p>Address: Bugallon, Pangasinan</p>
     </footer>
 
 </body>

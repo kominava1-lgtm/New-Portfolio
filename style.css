@@ -636,7 +636,15 @@ a:hover {
 
 }
 
+.about-body {
+    display: flex;
+    flex-wrap: wrap;
+    
+}
 
+.about-right {
+    background-color: red;
+}
 
 
 
