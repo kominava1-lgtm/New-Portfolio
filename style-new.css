@@ -696,7 +696,7 @@ footer {
    RESPONSIVE
 ========================= */
 
-@media (max-width: 800px) {
+@media (max-width: 300px) {
     .home-grid {
         grid-template-columns: 1fr;
         text-align: center;
@@ -742,7 +742,7 @@ footer {
     }
 }
 
-@media (max-width: 300px) {
+@media (max-width: 200px) {
     .section {
         padding: 60px 18px;
     }
