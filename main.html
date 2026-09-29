@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Santiago C. Navato II — Portfolio</title>
+    <title>ESN-Personal Portfolio Website</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -17,8 +17,8 @@
             <a href = "#home" class="logo">&lt;ESN/&gt;</a>
             <ul class="navbar">
                 <li><a href="#home">Home</a></li>
-                <li><a href="#about-section">About</a></li>
                 <li><a href="#project-section">Projects</a></li>
+                <li><a href="#about-section">About</a></li>
                 <li><a href="#contact-section">Contact</a></li>
             </ul>
         </nav>
@@ -35,7 +35,7 @@
                 <div class = "home-text">
                     
                     <h1 class="home-name">Santiago C. Navato II</h1>
-                    <p class = "home-role">Computer Engineer &middot; Rising Frontend Developer</p>
+                    <p class = "home-role">Computer Engineer &middot; Web Developer</p>
                     <p class="home-welcome-message">
                         <span class="subtitle">What is this? Where am I?</span><br><br>
                             This is the portfolio of Santiago C. Navato II. A  fresh graduate of 
@@ -46,7 +46,7 @@
                     </p>
                     <div class = "home-actions">
                         <a href = "#project-section" class = "btn btn-primary">View Projects</a>
-                        <a href = "CV-Navato, Santiago II Cosas.pdf" class = "btn btn-primary">View Resume/CV</a>
+                        <a href = "CV-Navato, Santiago II Cosas.pdf" class = "btn btn-primary" target="_blank">View Resume/CV</a>
                         <a href = "#contact-section" class = "btn btn-ghost">Get in Touch</a>
                     </div>
                 </div>
@@ -77,8 +77,193 @@
             <h2 class="section-title">Projects</h2>
             <p class = "section-intro">You may browse the projects of the user to view his work.</p>
 
+
+            <h3 class = "project-highlight">PROJECT HIGHLIGHT</h3>
+<div class = "stage" id = "stage">
+                <div class="project-card highlight-card">
+                        <img src="parkhAIve_logo.png" alt="parkhAIve: A Smart Parking Management System" class="project-img">
+                        <div class = "project-body">    
+                            <h3>parkhAIve: A Yolo-V8 based Smart Parking Management System of PHINMA UPang</h3>
+                            <p>This is a smart parking management system designed for PHINMA UPang, aiming to optimize parking space utilization and improve the overall parking experience for students and staff.</p>
+                            <div class="tag-row">
+                                <span class="tag">YOLO-v8</span>
+                                <span class="tag">Python</span>
+                                <span class="tag">Artificial Intelligence</span>
+                                <span class="tag">Computer Vision</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="project1.html" class="project-link" id="viewBtn"><i>Click to view Project</i></a>
+                            <a href="Copy of parkhAIve (full paper).pdf" class="social-link thesis-link" target="_blank" rel="noopener noreferrer">View Thesis Paper</a>
+                        </div>
+                        </div>
+                    </div>
+       <div class="detail" id="detail">
+    <p class="lead">parkhAIve is a smart parking management system developed as an engineering research project for PHINMA University of Pangasinan. It serves as a computer vision-driven framework designed to automate parking monitoring without relying on expensive physical ground sensors.</p>
+    <div class="shots">
+      <div class="shot-column">
+        <a class="poster-link" href="parkhaive-poster-display.webp" target="_blank" rel="noopener" aria-label="Open the full parkhaive overview image">
+          <img src="parkhaive-poster-display.webp" alt="parkhaive overview">
+        </a>
+      </div>
+      <div class="shot-column">
+        <p class="caption">parkhAIve combines artificial intelligence, computer vision, and web software to convert standard camera feeds into real-time parking data.<br><br>Developed for localized campus environments, the system was tested along PHINMA Avenue near the university gymnasium. 
+    It uses an overhead IP camera connected to a local processing server. Processing video locally reduces bandwidth use and latency while keeping data within the campus network.</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="detail-lower-grid">
+  <p class="caption">The general objective of parkhAIve is to design and develop a prototype smart parking management system that utilizes image processing and machine learning for the real-time monitoring of parking slot availability. Specifically, the project aims to implement a continuous data acquisition pipeline using a network-connected 1080p IP camera and train a YOLOv8n object detection model to accurately classify four-wheeled private vehicles to determine whether individual parking spaces are vacant or occupied. To support administrative operations and keep campus users informed, the system synchronizes this real-time detection pipeline with a web-based digital twin interface that visually displays current parking slot status and system information. Ultimately, the system aims to achieve low-latency performance and high detection accuracy, evaluating its overall effectiveness, response time, and consistency within a campus environment.</p>
+  <div class="detail-lower-columns">
+    <figure class="dashboard-figure">
+      <div class="dashboard-slider" aria-label="parkhAIve project images">
+        <img class="dashboard-slide" src="parkhaive interface.png" alt="parkhaive admin/userdashboard" loading="lazy">
+        <img class="dashboard-slide" src="parkhaive_docu1.png" alt="parkhAIve project image" loading="lazy">
+        <img class="dashboard-slide dslide" src="parkhaive_docu2.png" alt="parkhAIve project image" loading="lazy">
+        <img class="dashboard-slide dslide" src="parkhaive_docu3.png" alt="parkhAIve project image" loading="lazy">
+      </div>
+      <figcaption>Figure PH.1: parkhAIve documentation</figcaption>
+    </figure>
+    <figure class="video-figure">
+      <button class="video-thumbnail" type="button" data-video-src="parkhaive_2.mp4" aria-label="Open the parkhAIve demo video" aria-haspopup="dialog" aria-controls="parkhaiveVideoDialog">
+        <img src="parkhaive_logo.png" alt="" loading="lazy">
+        <span class="video-play-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13l10-6.5z"/></svg>
+        </span>
+      </button>
+      <figcaption>Figure PH.2: parkhAIve demonstration video</figcaption>
+    </figure>
+  </div>
+</div>
+
+
+
+            <div class="project-dropdown-grid">
+            <details class="project-dropdown">
+                <summary class = "project-dropdown-summary">
+                    <h3>Software Projects</h3>
+                    
+                    <span class = "project-dropdown-icon" aria-hidden = "true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" width = 100 height = 100><path d="M6 9l6 6 6-6"/></svg>
+                    </span>
+                </summary>
                 <!-- Cards -->
-                <div class="project-grid">
+                <div class="project-dropdown-content">
+                    <div class="project-dropdown-content-inner">
+                        <p class="project-dropdown-intro">Browse my software projects.</p>
+                        <div class="project-grid">
+
+                    <div class="project-card">
+                        <img src="Cafe Finder.png" alt="project 1" class="project-img">
+                        <div class = "project-body">    
+                            <h3>EspressoXPress: Cafe Finder</h3>
+                            <p>A Cafe Finder website for locating nearby coffee shops in Pangasinan. A showcase of UI design and website development skills.</p>
+                            <div class="tag-row">
+                                <span class="tag">HTML</span>
+                                <span class="tag">CSS</span>
+                                <span class="tag">JavaScript</span>
+                            </div>
+                        <a href="https://kominava1-lgtm.github.io/COFFEE-SHOP/" class="project-link" target="_blank"><i>Click to view Project</i></a>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <img src="Personal Web Portfolio.png" alt="Personal Portfolio Website" class="project-img">
+                        <div class = "project-body">    
+                            <h3>Personal Portfolio Website</h3>
+                            <p>A website composed of my projects ranging from hardware to software. It also contains my information and achievements with documentation. This website showcases my skills in web design using HTML, CSS, and JavaScript.</p>
+                            <div class="tag-row">
+                                <span class="tag">HTML</span>
+                                <span class="tag">CSS</span>
+                                <span class="tag">JavaScript</span>
+                            </div>
+                        <a href="https://kominava1-lgtm.github.io/New-Portfolio/main.html" class="project-link" target="_blank"><i>Click to view Project</i></a>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <img src="bg3.png" alt="project 1" class="project-img">
+                        <div class = "project-body">    
+                            <h3>Project 1</h3>
+                            <p>Placeholder entry for a full-stack inventory tracker &mdash; swap in your capstone or class project details here.</p>
+                            <div class="tag-row">
+                                <span class="tag">JavaScript</span>
+                                <span class="tag">SQL</span>
+                            </div>
+                        <a href="project1.html" class="project-link"><i>Click to view Project</i></a>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <img src="bg2.jpg" alt="project 1" class="project-img">
+                        <div class = "project-body">    
+                            <h3>Project 1</h3>
+                            <p>Placeholder entry for a full-stack inventory tracker &mdash; swap in your capstone or class project details here.</p>
+                            <div class="tag-row">
+                                <span class="tag">JavaScript</span>
+                                <span class="tag">SQL</span>
+                            </div>
+                        <a href="project1.html" class="project-link"><i>Click to view Project</i></a>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <img src="bg3.png" alt="project 1" class="project-img">
+                        <div class = "project-body">    
+                            <h3>Project 1</h3>
+                            <p>Placeholder entry for a full-stack inventory tracker &mdash; swap in your capstone or class project details here.</p>
+                            <div class="tag-row">
+                                <span class="tag">JavaScript</span>
+                                <span class="tag">SQL</span>
+                            </div>
+                        <a href="project1.html" class="project-link"><i>Click to view Project</i></a>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <img src="bg2.jpg" alt="project 1" class="project-img">
+                        <div class = "project-body">    
+                            <h3>Project 1</h3>
+                            <p>Placeholder entry for a full-stack inventory tracker &mdash; swap in your capstone or class project details here.</p>
+                            <div class="tag-row">
+                                <span class="tag">JavaScript</span>
+                                <span class="tag">SQL</span>
+                            </div>
+                        <a href="project1.html" class="project-link"><i>Click to view Project</i></a>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <img src="bg3.png" alt="project 1" class="project-img">
+                        <div class = "project-body">    
+                            <h3>Project 1</h3>
+                            <p>Placeholder entry for a full-stack inventory tracker &mdash; swap in your capstone or class project details here.</p>
+                            <div class="tag-row">
+                                <span class="tag">JavaScript</span>
+                                <span class="tag">SQL</span>
+                            </div>
+                        <a href="project1.html" class="project-link"><i>Click to view Project</i></a>
+                        </div>
+                    </div>
+
+                        </div>
+                    </div>
+                </div>
+            </details>
+
+            <details class="project-dropdown">
+                <summary class = "project-dropdown-summary">
+                    <h3>Hardware Projects</h3>
+                    
+                    <span class = "project-dropdown-icon" aria-hidden = "true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" width = 100 height = 100><path d="M6 9l6 6 6-6"/></svg>
+                    </span>
+                </summary>
+                <!-- Cards -->
+                <div class="project-dropdown-content">
+                    <div class="project-dropdown-content-inner">
+                        <p class="project-dropdown-intro">Browse my hardware projects.</p>
+                        <div class="project-grid">
 
                     <div class="project-card">
                         <img src="Cafe Finder.png" alt="project 1" class="project-img">
@@ -172,7 +357,11 @@
                         </div>
                     </div>
 
+                        </div>
+                    </div>
                 </div>
+            </details>
+            </div>
         </section>
 
 
@@ -184,7 +373,7 @@
             <p class="section-intro">Background, education, and the leadership experience that shaped how I work.</p>
 
             <div class="spec-grid">
-                <div class="card spec-card">
+                <div class="card spec-card about-card" role="button" tabindex="0" aria-haspopup="dialog" aria-controls="aboutCardDialog" data-about-info="Santiago is building a career in frontend development after studying Computer Engineering. Based in Pangasinan, he is open to work and collaborations.">
                     <h3 class="card-title">Personal Information</h3>
                     <dl class="spec-list">
                         <div><dt>Name</dt><dd>Santiago Cosas Navato II</dd></div>
@@ -195,7 +384,7 @@
                     </dl>
                 </div>
 
-                <div class="card spec-card">
+                <div class="card spec-card about-card" role="button" tabindex="0" aria-haspopup="dialog" aria-controls="aboutCardDialog" data-about-info="His engineering background and frontend interests come together in projects like parkhAIve, which uses computer vision and a web interface to make campus parking information easier to understand.">
                     <h3 class="card-title">Education</h3>
                     <h4 class="card-subhead">Tertiary</h4>
                     <p class="card-text">PHINMA University of Pangasinan<br>BS Computer Engineering<br>Batch 2026</p>
@@ -203,7 +392,7 @@
                     <p class="card-text">Pangasinan National High School<br>Senior High School &mdash; STEM<br>Batch 2022</p>
                 </div>
 
-                <div class="card spec-card">
+                <div class="card spec-card about-card" role="button" tabindex="0" aria-haspopup="dialog" aria-controls="aboutCardDialog" data-about-info="His student organization work covered representation, editing, and external affairs. Those roles gave him experience contributing to groups at both campus and regional levels.">
                     <h3 class="card-title">Leadership Experience</h3>
                     <h4 class="card-subhead">Supreme Student Council</h4>
                     <ul class="a-list">
@@ -222,7 +411,7 @@
             </div>
 
             <div class="about-lower-grid">
-                <div class="card about-right">
+                <div class="card about-right about-card" role="button" tabindex="0" aria-haspopup="dialog" aria-controls="aboutCardDialog" data-about-info="He enjoys starting with how a system works, then shaping that into an interface people can use comfortably. parkhAIve reflects that approach by turning camera-based parking detection into a live digital view of available spaces.">
                     <h3 class="card-title">Beyond the Resume</h3>
                     <p class="card-text">
                         I got into Computer Engineering because I liked knowing how things work
@@ -236,7 +425,7 @@
                     </div>
                 </div>
 
-                <div class="card skills-card">
+                <div class="card skills-card about-card" role="button" tabindex="0" aria-haspopup="dialog" aria-controls="aboutCardDialog" data-about-info="His toolkit crosses several kinds of work: building web interfaces, programming with Python, experimenting with Arduino, and creating visual layouts and video edits. He is currently sharpening his JavaScript skills.">
                     <h3 class="card-title">Skills &amp; Tools</h3>
                     <div class="skills-grid">
                         <div class="skill-group">
@@ -274,56 +463,7 @@
             </div>
         </section>
        
-        <!--<section class="about-section" id="about-section">
-            <h2 class="section-title">About Me</h2>
-            <p>This section contains information about the user, including his background, skills, and experience.</p>
-            
-            <div class = "about-body">
-
-                <div class = "about-carousel">
-                    <div class = "about-personal-info">
-                        <div class = "about-personal card">
-                            <h3 class = "abt-title">Personal Information</h3>
-                            <p>Name: Santiago Cosas Navato II</p>
-                            <p>Age: 22</p>
-                            <p>Sex: Male</p>
-                            <p>Birthdate: February 22, 2004</p>
-                            <p>Address: Pangasinan, Philippines</p>
-                        </div>
-
-                        <div class = "about-education card">
-                            <h3 class = "abt-title">Education</h3>
-                            <h4>Tertiary</h4>
-                            <p>PHINMA University of Pangasinan<br>Bachelor of Science in Computer Engineering<br>Batch 2026</p>
-                            <h4>Secondary</h4>
-                            <p>Pangasinan National High School<br>Senior High School-STEM<br>Batch 2022</p>
-                        </div>
-
-                        <div class = "about-leadership card">
-                            <h3 class = "abt-title">Leadership Experiences</h3>
-                            <h4>Supreme Student Council</h4>
-                            <ul class = "a-list">
-                                <li>CEA Representative (2025-2026)</li>
-                                <li>Editor (2022-2024)</li>
-                            </ul>
-                            <h4>Institute of Computer Engineers of the Philippines Student Edtion (Region 1)</h4>
-                            <ul class = "a-list">
-                                <li>Vice President for External Affairs (2025-2026)</li>
-                            </ul>
-                            
-                            <h4>Institute of Computer Engineers of the Philippines Student Edtion (PHINMA UPang)</h4>
-                            <ul class = "a-list">
-                                <li>Vice President fo External Affairs (2024-2025)</li>     
-                        </div>
-                    </div> 
-                </div>
-
-                <div class = "about-right"> sfs</div>
-
-            </div>
-
-                <div class = "about-skills"></div>
-        </section>-->
+       
 
         <!--CONTACT SECTION-->
 
@@ -341,12 +481,12 @@
                     <span class = "contact-value">kominava1@gmail.com</span>
                 </a>
 
-                <a href="tel:+639123456789" class="card contact-card">
+                <a href="tel:+639457538610" class="card contact-card">
                     <span class="contact-icon" aria-hidden="true">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L14 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 1-2z"/></svg>
                     </span>
                     <span class="contact-label">Phone</span>
-                    <span class="contact-value">+63 912 345 6789</span>
+                    <span class="contact-value">+63 945 753 8610</span>
                 </a>
 
                 <div class="card contact-card contact-card-static c-add">
@@ -369,6 +509,20 @@
         </section>
 
         
+        <dialog class="video-dialog" id="parkhaiveVideoDialog" aria-label="parkhAIve demo video">
+            <div class="video-dialog-content">
+                <button class="video-dialog-close" type="button" aria-label="Close video">&times;</button>
+                <video controls preload="none" playsinline hidden></video>
+                <p class="video-empty-state">Add the video link to the thumbnail's <code>data-video-src</code> attribute.</p>
+            </div>
+        </dialog>
+        <dialog class="about-dialog" id="aboutCardDialog" aria-labelledby="aboutDialogTitle">
+            <div class="about-dialog-content">
+                <button class="about-dialog-close" type="button" aria-label="Close details">&times;</button>
+                <h2 class="card-title" id="aboutDialogTitle"></h2>
+                <p class="about-dialog-summary" id="aboutDialogSummary"></p>
+            </div>
+        </dialog>
     </main>
 
     <!--FOOTER-->
@@ -377,5 +531,9 @@
         <p>&copy; 2023 Santiago C. Navato II. All rights reserved.</p>
     </footer>
 
+    <script src="script.js"></script>
 </body>
+
 </html>
+
+
