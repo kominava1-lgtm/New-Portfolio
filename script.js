@@ -188,18 +188,68 @@ document.querySelectorAll('.dashboard-slider').forEach((slider) => {
 const aboutCards = document.querySelectorAll('.about-card');
 const aboutDialog = document.getElementById('aboutCardDialog');
 const aboutDialogTitle = document.getElementById('aboutDialogTitle');
+const aboutDialogDetails = document.getElementById('aboutDialogDetails');
 const aboutDialogSummary = document.getElementById('aboutDialogSummary');
 const aboutDialogClose = aboutDialog?.querySelector('.about-dialog-close');
 
-if (aboutDialog && aboutDialogTitle && aboutDialogSummary) {
-  const openAboutDialog = (card) => {
+if (aboutDialog && aboutDialogTitle && aboutDialogDetails && aboutDialogSummary) {
+  let revealOrigin = { x: window.innerWidth / 2, y: window.innerHeight / 2 };
+  let isAnimating = false;
+  let isClosing = false;
+  let closeRequested = false;
+  let revealAnimation;
+
+  const getRevealRadius = (x, y) => Math.ceil(Math.hypot(
+    Math.max(x, window.innerWidth - x),
+    Math.max(y, window.innerHeight - y),
+  ));
+
+  const animateReveal = (opening) => {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return Promise.resolve();
+
+    const { x, y } = revealOrigin;
+    const radius = getRevealRadius(x, y);
+    const start = `circle(${opening ? 0 : radius}px at ${x}px ${y}px)`;
+    const end = `circle(${opening ? radius : 0}px at ${x}px ${y}px)`;
+    revealAnimation?.cancel();
+    revealAnimation = aboutDialog.animate(
+      [{ clipPath: start }, { clipPath: end }],
+      { duration: opening ? 560 : 420, easing: opening ? 'cubic-bezier(0.2, 0.75, 0.25, 1)' : 'cubic-bezier(0.55, 0, 0.8, 0.25)' },
+    );
+    return revealAnimation.finished.catch(() => {});
+  };
+
+  const getCardCenter = (card) => {
+    const rect = card.getBoundingClientRect();
+    return { x: rect.left + rect.width / 2, y: rect.top + rect.height / 2 };
+  };
+
+  const openAboutDialog = async (card, origin = getCardCenter(card)) => {
+    if (aboutDialog.open || isAnimating) return;
+    revealOrigin = origin;
     aboutDialogTitle.textContent = card.querySelector('.card-title')?.textContent.trim() || 'About';
     aboutDialogSummary.textContent = card.dataset.aboutInfo || '';
+    const expandedDetails = Array.from(card.children)
+      .filter((child) => !child.classList.contains('card-title'))
+      .map((child) => child.cloneNode(true));
+    expandedDetails.forEach((child) => {
+      if (child.matches('.about-expanded-only')) child.removeAttribute('hidden');
+      child.querySelectorAll('.about-expanded-only').forEach((details) => details.removeAttribute('hidden'));
+    });
+    aboutDialogDetails.replaceChildren(...expandedDetails);
     aboutDialog.showModal();
+    isAnimating = true;
+    await animateReveal(true);
+    isAnimating = false;
+    revealAnimation = null;
+    if (closeRequested) {
+      closeRequested = false;
+      closeAboutDialog();
+    }
   };
 
   aboutCards.forEach((card) => {
-    card.addEventListener('click', () => openAboutDialog(card));
+    card.addEventListener('click', (event) => openAboutDialog(card, { x: event.clientX, y: event.clientY }));
     card.addEventListener('keydown', (event) => {
       if (event.key === 'Enter' || event.key === ' ') {
         event.preventDefault();
@@ -208,9 +258,28 @@ if (aboutDialog && aboutDialogTitle && aboutDialogSummary) {
     });
   });
 
-  aboutDialogClose?.addEventListener('click', () => aboutDialog.close());
+  const closeAboutDialog = async () => {
+    if (!aboutDialog.open) return;
+    if (isAnimating) {
+      if (!isClosing) closeRequested = true;
+      return;
+    }
+    isAnimating = true;
+    isClosing = true;
+    await animateReveal(false);
+    aboutDialog.close();
+    revealAnimation = null;
+    isAnimating = false;
+    isClosing = false;
+  };
+
+  aboutDialogClose?.addEventListener('click', closeAboutDialog);
+  aboutDialog.addEventListener('cancel', (event) => {
+    event.preventDefault();
+    closeAboutDialog();
+  });
   aboutDialog.addEventListener('click', (event) => {
-    if (event.target === aboutDialog) aboutDialog.close();
+    if (event.target === aboutDialog) closeAboutDialog();
   });
 }
 
